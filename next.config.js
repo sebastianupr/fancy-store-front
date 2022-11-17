@@ -2,6 +2,20 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  compiler: {
+    styledComponents: {
+      ssr: true,
+      displayName: true,
+    }
+  },
+  experimental: {
+    fontLoaders: [
+      { loader: '@next/font/google', options: { subsets: ['latin'] } },
+    ],
+  },
+  images: {
+    domains: ["cdn.shopify.com"]
+  }
 }
 
 module.exports = nextConfig
