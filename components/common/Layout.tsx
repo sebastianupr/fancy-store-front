@@ -9,6 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <LayoutContentContainer>
         <Navbar />
         <main>{children}</main>
+        <BottomBar.SafeArea />
       </LayoutContentContainer>
       <BottomBar />
     </>
@@ -18,6 +19,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 const LayoutContentContainer = styled.div`
   position: relative;
   height: 100%;
-  padding: 0 1rem 5rem 1rem;
+  padding: 0 1rem;
   overflow: auto;
 `;
