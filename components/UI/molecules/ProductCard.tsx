@@ -40,7 +40,8 @@ const CardContainer = styled.div<{ color: "" }>`
   margin-bottom: 1.1rem;
   background-color: ${(props) => props.theme.colors.lightGreen};
 
-  border-radius: ${(props) => props.theme.borderRadiuses.xMedium}; ;
+  border-radius: ${(props) => props.theme.borderRadiuses.xMedium};
+  cursor: pointer;
 `;
 
 const ProductInfo = styled.div`

@@ -2,8 +2,18 @@ export type ProductsQuery = {
   products: {
     edges: Node[];
     __typename: "Products";
+    pageInfo: {
+      endCursor: string;
+      hasNextPage: boolean;
+    }
   };
 };
+
+export type ProductsQueryVariables = {
+  pageSize: number;
+  searchKeyword?: string;
+  endCursor?: string;
+}
 
 export type Node = {
   node: {

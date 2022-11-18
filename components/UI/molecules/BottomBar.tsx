@@ -18,10 +18,10 @@ export default function BottomBar() {
           <HomeButton />
         </div>
 
-        <MdFavorite color={theme.colors.lightGray} />
-        <HiShoppingCart color={theme.colors.lightGray} />
-        <BsBoxSeam color={theme.colors.lightGray} />
-        <IoPersonCircleSharp color={theme.colors.lightGray} />
+        <MdFavorite color={theme.colors.lightGray} size="1.2rem" />
+        <HiShoppingCart color={theme.colors.lightGray} size="1.2rem" />
+        <BsBoxSeam color={theme.colors.lightGray} size="1.2rem" />
+        <IoPersonCircleSharp color={theme.colors.lightGray} size="1.2rem" />
       </NavList>
     </BottomBarContainer>
   );
