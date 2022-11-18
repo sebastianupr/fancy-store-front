@@ -1,5 +1,8 @@
-import styled from "styled-components";
 import Image from "next/image";
+import styled from "styled-components";
+
+import Heading5 from "@components/UI/atoms/typography/Heading5";
+import Heading6 from "@components/UI/atoms/typography/Heading6";
 
 import type { Product } from "@shared/types/products.types";
 
@@ -10,7 +13,7 @@ type Props = {
 export default function ProductCard({ product }: Props) {
   const { title, image, price } = product;
   return (
-    <CardContainer color="">
+    <CardContainer>
       {image?.url ? (
         <Image
           src={image.url}
@@ -21,14 +24,14 @@ export default function ProductCard({ product }: Props) {
       ) : null}
 
       <ProductInfo>
-        <h5>{title}</h5>
-        <h6>{price}</h6>
+        <Heading5>{title}</Heading5>
+        <Heading6>{price}</Heading6>
       </ProductInfo>
     </CardContainer>
   );
 }
 
-const CardContainer = styled.div<{ color: "" }>`
+const CardContainer = styled.div<{ color?: "" }>`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -48,16 +51,4 @@ const ProductInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  h5,
-  h6 {
-    margin: 0;
-  }
-
-  h5 {
-    color: ${(props) => props.theme.colors.black};
-  }
-  h6 {
-    color: ${(props) => props.theme.colors.darkGray};
-  }
 `;

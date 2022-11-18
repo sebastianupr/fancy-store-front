@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import Navbar from "./UI/molecules/Navbar";
-import BottomBar from "./UI/molecules/BottomBar";
+import Navbar from "@components/UI/molecules/Navbar";
+import BottomBar from "@components/UI/molecules/BottomBar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

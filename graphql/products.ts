@@ -4,7 +4,7 @@ import { gql, useQuery } from "@apollo/client";
 import { translateProductsQuery } from "@shared/translators/products";
 
 import type { Product } from "@shared/types/products.types";
-import type { ProductsQuery, ProductsQueryVariables } from "./products.types";
+import type { ProductsQuery, ProductsQueryVariables } from "./productsTypes";
 
 const GET_PRODUCTS = gql`
   query GetProducts(
@@ -71,15 +71,11 @@ export const useProductsCatalog = () => {
   const loadMore = async ({
     searchKeyword,
   }: Partial<ProductsQueryVariables> = {}) => {
-    if (searchKeyword) {
+    if (searchKeyword || searchKeyword === "") {
       return refetch({
         ...defaultVariables,
         searchKeyword,
       });
-    }
-
-    if (searchKeyword === "") {
-      return refetch({ ...defaultVariables, searchKeyword: "" });
     }
 
     if (data?.products?.pageInfo?.hasNextPage) {
@@ -105,8 +101,6 @@ export const useProductsCatalog = () => {
   return {
     ...rest,
     data: products,
-    defaultVariables,
-    fetchMore,
     loadMore,
   };
 };
