@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "@theme";
 
 const nunito = Nunito_Sans({
-  weight: "900",
+  weight: ["800", "900"],
 });
 
 export default function ThemeContainer({

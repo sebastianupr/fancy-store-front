@@ -1,9 +1,10 @@
+import styled from "styled-components";
+
 import { MdFavorite } from "react-icons/md";
 import { HiShoppingCart } from "react-icons/hi";
 import { BsBoxSeam } from "react-icons/bs";
 import { IoPersonCircleSharp } from "react-icons/io5";
 
-import styled from "styled-components";
 import useTheme from "@hooks/useTheme";
 
 import HomeButton from "@components/UI/atoms/buttons/HomeButton";

@@ -1,12 +1,15 @@
 import { useState, useCallback } from "react";
-import { useProductsCatalog } from "@graphql/products";
 import { InView } from "react-intersection-observer";
-
 import styled from "styled-components";
 
-import Heading4 from "@components/UI/atoms/headings/Heading4";
 import SearchBar from "@components/UI/molecules/SearchProductsBar";
 import ListOfProducts from "@components/UI/organisms/products/ListOfProducts";
+import Heading4 from "@components/UI/atoms/typography/Heading4";
+import Paragraph from "@components/UI/atoms/typography/Paragraph";
+
+import { useProductsCatalog } from "@graphql/products";
+
+import useTheme from "@hooks/useTheme";
 
 import type {
   InputChangeEvent,
@@ -16,7 +19,7 @@ import type {
 export default function ProductsCatalog() {
   const [searchKeyword, setSearchKeyword] = useState("");
 
-  const { data: products, loading, error, loadMore } = useProductsCatalog();
+  const { data: products, loading, loadMore } = useProductsCatalog();
 
   const handleChangeSearch = useCallback((evt: InputChangeEvent) => {
     setSearchKeyword(evt.target.value ?? "");
@@ -31,6 +34,8 @@ export default function ProductsCatalog() {
     if (inView && products) loadMore();
   };
 
+  const theme = useTheme();
+
   return (
     <ProductsCatalogContainer>
       <form onSubmit={handleSearch}>
@@ -39,7 +44,7 @@ export default function ProductsCatalog() {
 
       <ActionsRow>
         <Heading4>Popular</Heading4>
-        <p>View all</p>
+        <Paragraph color={theme.colors.lightGray}>View all</Paragraph>
       </ActionsRow>
 
       <ListOfProducts

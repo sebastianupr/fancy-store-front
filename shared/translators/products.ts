@@ -1,4 +1,4 @@
-import type { Node } from "@graphql/products.types"
+import type { Node } from "@graphql/productsTypes"
 import type { Product } from "@shared/types/products.types"
 import { formatFiat } from "@shared/utils/currency"
 
