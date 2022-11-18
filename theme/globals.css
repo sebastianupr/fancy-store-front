@@ -2,9 +2,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  /* font-family: 'Nunito Sans', sans-serif; */
-  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 a {
@@ -31,5 +28,10 @@ button {
   background-color:transparent;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  box-shadow: none;  
+  box-shadow: none;
+}
+
+p {
+  font-size: 0.8rem;
+  font-weight: 700;
 }

@@ -1,5 +1,5 @@
-import PageWrapper from "@components/PageWrapper";
-import Layout from "@components/Layout";
+import PageWrapper from "@components/common/PageWrapper";
+import Layout from "@components/common/Layout";
 
 export default function getLayout(page: React.ReactNode): JSX.Element {
   return (

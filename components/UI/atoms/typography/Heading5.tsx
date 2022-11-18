@@ -5,6 +5,5 @@ export default function Heading5({ children }: { children: React.ReactNode }) {
 }
 
 const H5 = styled.h5`
-  margin: 0;
-  color: ${(props) => props.theme.colors.black};
+  ${(props) => props.theme.fontStyles.heading5};
 `;

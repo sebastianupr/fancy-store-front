@@ -17,7 +17,7 @@ const CardSkeleton = styled.div`
 
 const ProductSkeleton = styled.div`
   height: 12rem;
-  width: 12rem;
+  width: 11rem;
   animation: ${(props) => props.theme.keyframes.skeletonKeyframes} 1300ms
     ease-in-out infinite;
   background: #eee 200px 100% no-repeat;

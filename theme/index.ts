@@ -26,11 +26,38 @@ const borderRadiuses = {
   xMedium: '0.75rem',
 }
 
+const fontStylesCommon = {
+  margin: 0
+}
+
+const fontStyles = {
+  heading3: {
+    ...fontStylesCommon,
+  },
+  heading4: {
+    ...fontStylesCommon,
+    color: colors.black,
+  },
+  heading5: {
+    ...fontStylesCommon,
+    color: colors.black,
+  },
+  heading6: {
+    ...fontStylesCommon,
+    color: colors.darkGray
+  },
+  paragraph: {
+    ...fontStylesCommon,
+    color: colors.black,
+  }
+}
+
 const theme = {
   colors,
   breakpoints,
   borderRadiuses,
-  keyframes
+  keyframes,
+  fontStyles,
 };
 
 export default theme

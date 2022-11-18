@@ -1,8 +1,7 @@
 import Head from "next/head";
 
-import getLayout from "@components/getLayout";
-
-import ProductsCatalog from "@components/templates/ProductsCatalog";
+import getLayout from "@components/common/getLayout";
+import ProductsCatalog from "@components/UI/templates/ProductsCatalog";
 
 export default function Home() {
   return (
