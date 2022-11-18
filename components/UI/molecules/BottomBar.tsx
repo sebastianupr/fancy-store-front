@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { StyledComponent } from "styled-components";
 
 import { MdFavorite } from "react-icons/md";
 import { HiShoppingCart } from "react-icons/hi";
@@ -9,7 +9,9 @@ import useTheme from "@hooks/useTheme";
 
 import HomeButton from "@components/UI/atoms/buttons/HomeButton";
 
-export default function BottomBar() {
+const BottomBar: React.FC & {
+  SafeArea: StyledComponent<"div", any, {}, never>;
+} = () => {
   const theme = useTheme();
 
   return (
@@ -26,25 +28,42 @@ export default function BottomBar() {
       </NavList>
     </BottomBarContainer>
   );
-}
+};
 
 const BottomBarContainer = styled.div`
-  position: absolute;
+  display: flex;
+  justify-content: center;
+
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 2;
 
   width: 100%;
-  height: 5rem;
+  height: 3.5rem;
 
   background-color: ${(props) => props.theme.colors.white};
+
+  @media (min-width: ${(props) => props.theme.breakpoints.sm}) {
+    position: absolute;
+  }
 `;
 
 const NavList = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
-  padding-top: 0.75rem;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.25rem;
 `;
+
+const SafeArea = styled.div`
+  width: 100%;
+  height: 8.5rem;
+`;
+
+BottomBar.SafeArea = SafeArea;
+
+export default BottomBar;
