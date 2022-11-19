@@ -5,7 +5,7 @@ const waitForFetch = () => sleep(2000);
 
 describe("App home", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3001");
+    cy.visit("/");
   });
 
   it("Home page renders", () => {
