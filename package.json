@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --port=3001",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --port=3001",
     "analyze": "BUNDLE_ANALYZE=both next build",
     "lint": "next lint",
     "prettier-fix": "prettier --write .",
