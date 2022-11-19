@@ -13,6 +13,7 @@ export default function ThemeContainer({
 }) {
   return (
     <>
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
       <style jsx global>{`
         html,body {
           padding: 0;
@@ -20,7 +21,6 @@ export default function ThemeContainer({
           font-family: ${nunito.style.fontFamily};
       `}</style>
 
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </>
   );
 }
