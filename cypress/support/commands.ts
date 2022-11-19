@@ -1,3 +1,4 @@
+// @ts-ignore
 /// <reference types="cypress" />
 // ***********************************************
 // This example commands.ts shows you how to
