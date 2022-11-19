@@ -5,12 +5,14 @@ import { HiShoppingCart } from "react-icons/hi";
 import { BsBoxSeam } from "react-icons/bs";
 import { IoPersonCircleSharp } from "react-icons/io5";
 
-import useTheme from "@hooks/useTheme";
-
 import HomeButton from "@components/UI/atoms/buttons/HomeButton";
 
+import useTheme from "@hooks/useTheme";
+
+import BottomBarSafeArea from "./BottomBarSafeArea";
+
 const BottomBar: React.FC & {
-  SafeArea: StyledComponent<"div", any, {}, never>;
+  SafeArea: typeof BottomBarSafeArea,
 } = () => {
   const theme = useTheme();
 
@@ -59,11 +61,6 @@ const NavList = styled.nav`
   margin-bottom: 0.25rem;
 `;
 
-const SafeArea = styled.div`
-  width: 100%;
-  height: 8.5rem;
-`;
-
-BottomBar.SafeArea = SafeArea;
+BottomBar.SafeArea = BottomBarSafeArea;
 
 export default BottomBar;

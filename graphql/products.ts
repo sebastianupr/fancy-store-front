@@ -3,6 +3,8 @@ import { gql, useQuery } from "@apollo/client";
 
 import { translateProductsQuery } from "@shared/translators/products";
 
+import { PAGE_SIZE } from "@shared/constants/pagination";
+
 import type { Product } from "@shared/types/products.types";
 import type { ProductsQuery, ProductsQueryVariables } from "./productsTypes";
 
@@ -48,8 +50,6 @@ const GET_PRODUCTS = gql`
   }
 `;
 
-const PAGE_SIZE = 8;
-
 export const useProductsCatalog = () => {
   const defaultVariables: ProductsQueryVariables = useMemo(
     () => ({ pageSize: PAGE_SIZE }),
@@ -87,7 +87,7 @@ export const useProductsCatalog = () => {
         updateQuery: (previousQueryResult, { fetchMoreResult }) => ({
           products: {
             edges: [
-              ...previousQueryResult.products.edges,
+              ...(previousQueryResult?.products?.edges ?? []),
               ...fetchMoreResult.products.edges,
             ],
             pageInfo: fetchMoreResult.products.pageInfo,

@@ -15,7 +15,7 @@ export default function SearchInput({ name, onChange, type, onSearch }: Props) {
         placeholder="Search..."
         type={type}
       />
-      <Icon onClick={() => onSearch?.()}>
+      <Icon data-test-id={`search-${name}`} onClick={() => onSearch?.()}>
         <FiSearch />
       </Icon>
     </SearchInputContainer>

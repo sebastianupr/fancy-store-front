@@ -6,9 +6,9 @@ import BottomBar from "@components/UI/molecules/BottomBar";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <LayoutContentContainer>
+      <LayoutContentContainer data-test-id="layout-container">
         <Navbar />
-        <main>{children}</main>
+        {children}
         <BottomBar.SafeArea />
       </LayoutContentContainer>
       <BottomBar />

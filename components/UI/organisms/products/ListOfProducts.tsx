@@ -21,7 +21,7 @@ export default function ListOfProducts({
   );
 
   return (
-    <ListContainer>
+    <ListContainer data-test-id="products-list">
       {isLoading
         ? renderSkeletons
         : products.map((product) => (
