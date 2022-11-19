@@ -13,7 +13,7 @@ jobs:
         with:
           build: npm run build
           start: npm run start
-          wait-on: http://localhost:3000
+          wait-on: http://localhost:3001
         env:
           NEXT_PUBLIC_ENVIRONMENT: ${{ secrets.NEXT_PUBLIC_ENVIRONMENT }}
           NEXT_PUBLIC_GRAPHQL_URI: ${{ secrets.NEXT_PUBLIC_GRAPHQL_URI }}
