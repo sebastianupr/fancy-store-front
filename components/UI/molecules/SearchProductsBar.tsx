@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import SearchInput from "@components/UI/atoms/inputs/SearchInput";
 import FiltersButton from "../atoms/buttons/FiltersButton";
-import { InputProps } from "@shared/types/dom.types";
+import { InputProps } from "@shared/types/domTypes";
 
 type SearchBarProps = {
   onSearch: () => void;

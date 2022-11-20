@@ -13,14 +13,14 @@ export default function ThemeContainer({
 }) {
   return (
     <>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+
       <style jsx global>{`
         html,body {
           padding: 0;
           margin: 0;
           font-family: ${nunito.style.fontFamily};
       `}</style>
-
     </>
   );
 }

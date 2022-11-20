@@ -4,7 +4,7 @@ import styled from "styled-components";
 import ProductCard from "@components/UI/molecules/ProductCard";
 import ProductCardSkeleton from "@components/UI/molecules/skeletons/ProductCardSkeleton";
 
-import type { Product } from "@shared/types/products.types";
+import type { Product } from "@shared/types/productsTypes";
 
 type Props = {
   isLoading: boolean;

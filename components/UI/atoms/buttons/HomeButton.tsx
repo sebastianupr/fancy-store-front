@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { AiFillHome } from "react-icons/ai";
 import useTheme from "@hooks/useTheme";
 
-import type { ButtonProps } from "@shared/types/dom.types";
+import type { ButtonProps } from "@shared/types/domTypes";
 
 export default function HomeButton({ onClick }: ButtonProps) {
   const theme = useTheme();

@@ -14,7 +14,7 @@ import useTheme from "@hooks/useTheme";
 import type {
   InputChangeEvent,
   FormSubmitEvent,
-} from "@shared/types/dom.types";
+} from "@shared/types/domTypes";
 
 export default function ProductsCatalog() {
   const [searchKeyword, setSearchKeyword] = useState("");

@@ -5,7 +5,7 @@ import { translateProductsQuery } from "@shared/translators/products";
 
 import { PAGE_SIZE } from "@shared/constants/pagination";
 
-import type { Product } from "@shared/types/products.types";
+import type { Product } from "@shared/types/productsTypes";
 import type { ProductsQuery, ProductsQueryVariables } from "./productsTypes";
 
 const GET_PRODUCTS = gql`
