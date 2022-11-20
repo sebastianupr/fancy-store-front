@@ -1,5 +1,5 @@
 import type { Node } from "@graphql/productsTypes"
-import type { Product } from "@shared/types/products.types"
+import type { Product } from "@shared/types/productsTypes"
 import { formatFiat } from "@shared/utils/currency"
 
 export const translateProductsQuery = (productNodes: Node[]): Product[] => {

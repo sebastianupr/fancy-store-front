@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FiSearch } from "react-icons/fi";
-import type { InputProps, FormSubmitEvent } from "@shared/types/dom.types";
+import type { InputProps, FormSubmitEvent } from "@shared/types/domTypes";
 
 type Props = {
   onSearch: () => void;

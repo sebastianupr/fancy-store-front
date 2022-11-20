@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Heading5 from "@components/UI/atoms/typography/Heading5";
 import Heading6 from "@components/UI/atoms/typography/Heading6";
 
-import type { Product } from "@shared/types/products.types";
+import type { Product } from "@shared/types/productsTypes";
 
 type Props = {
   product: Product;
