@@ -12,7 +12,9 @@ describe("App home", () => {
     cy.contains("Home");
   });
 
-  it("Products feed", () => {
+  it("Products feed", async () => {
+    await waitForFetch();
+
     // Check if products has been fetched
     cy.get('[data-test-id="products-list"]')
       .children()
@@ -22,7 +24,7 @@ describe("App home", () => {
   it("Products scroll pagination", async () => {
     await waitForFetch();
 
-    // Scroll
+    // Scroll bottom
     cy.get('[data-test-id="layout-container"]').scrollTo("0%", "100%");
 
     // Check if next page has been fetched
@@ -47,6 +49,8 @@ describe("App home", () => {
       .children()
       .should((products) => {
         const firstProduct = products[0];
+
+        // Should contain
         expect(firstProduct).to.contain.text("Nike");
       });
   });
