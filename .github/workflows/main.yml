@@ -1,19 +1,23 @@
 name: e2e cypress
 
 on: [push]
+
 jobs:
-  cypress-run:
+  install:
     name: Cypress run
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4.1.0
         with:
+          project: ./
+          browser: chrome
           build: npm run build
           start: npm run start
-          wait-on: http://localhost:3001
+          wait-on: "http://localhost:3001"
         env:
           NEXT_PUBLIC_ENVIRONMENT: ${{ secrets.NEXT_PUBLIC_ENVIRONMENT }}
           NEXT_PUBLIC_GRAPHQL_URI: ${{ secrets.NEXT_PUBLIC_GRAPHQL_URI }}
