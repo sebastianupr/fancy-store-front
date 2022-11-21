@@ -1,6 +1,7 @@
 name: e2e cypress
 
 on: [push]
+
 jobs:
   cypress-run:
     name: Cypress run
@@ -8,12 +9,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
+          browser: chrome
           build: npm run build
           start: npm run start
-          wait-on: http://localhost:3001
+          wait-on: "http://localhost:3000"
         env:
           NEXT_PUBLIC_ENVIRONMENT: ${{ secrets.NEXT_PUBLIC_ENVIRONMENT }}
           NEXT_PUBLIC_GRAPHQL_URI: ${{ secrets.NEXT_PUBLIC_GRAPHQL_URI }}
