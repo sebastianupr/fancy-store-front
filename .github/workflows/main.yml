@@ -3,9 +3,9 @@ name: e2e cypress
 on: [push]
 
 jobs:
-  cypress-run:
+  install:
     name: Cypress run
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
